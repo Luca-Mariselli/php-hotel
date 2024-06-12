@@ -47,11 +47,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
+    <div class="container">
         <?php foreach ($hotels as $hotel){
-            echo $hotel["name"];
+            echo "<div class=`my-col`> Nome:" . ' ' . $hotel["name"] .":";
+            echo "<li>" . $hotel["description"] . "</li>";
+            echo "<li> Voto:" . $hotel["vote"] . "/5</li>";
+            echo "<li> Distanza dal centro:" . $hotel["distance_to_center"] . "km</li></div>";
         } ?>
     </div>
 </body>
